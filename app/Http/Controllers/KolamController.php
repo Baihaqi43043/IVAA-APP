@@ -56,7 +56,7 @@ class KolamController extends Controller
     {
        kolam::insert([
         'nama_kolam'=> $request->kolam,
-        'jumlah_tebar'=> $request->jumlah
+        'jumlah_tebar'=> currencyIDRTONumeric($request->jumlah)
     ]);
     return redirect('kolam/index');
     }
